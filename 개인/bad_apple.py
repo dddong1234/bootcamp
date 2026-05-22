@@ -22,7 +22,6 @@ def frame_to_ascii(frame, width=80):
     return ascii_frame
 
 
-# 영상 파일 경로 (여기에 Bad Apple 영상 넣기)
 video_path = "/home/sdh080200/bad_apple.mp4"
 
 cap = cv2.VideoCapture(video_path)

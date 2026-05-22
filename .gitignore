@@ -5,3 +5,6 @@ __pycache__/
 *.log
 .idea
 .idea/
+train.csv
+data/
+*.csv

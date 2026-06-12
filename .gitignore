@@ -8,3 +8,19 @@ __pycache__/
 train.csv
 data/
 *.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Training artifacts
+HW/cv/dataset/
+HW/cv/day3_assignment_artifacts/
+HW/cv/runs_cxr/
+HW/cv/checkpoints/
+runs/
+catboost_info/
+
+# Local model weights
+HW/cv/yolo26n.pt
+HW/cv/yolov8n.pt
+HW/cv/yolov8s.pt

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "S-001",
+    "name": "K 교수",
+    "specialty": "신장내과",
+    "referral_available": true,
+    "note": "당뇨병성 만성콩팥병, eGFR 저하 동반 약물 조정 협진"
+  },
+  {
+    "id": "S-002",
+    "name": "L 교수",
+    "specialty": "순환기내과",
+    "referral_available": true,
+    "note": "심부전·죽상경화성 심혈관질환 동반 당뇨 협진"
+  },
+  {
+    "id": "S-003",
+    "name": "P 교수",
+    "specialty": "내분비내과",
+    "referral_available": true,
+    "note": "복잡 인슐린 요법, 반복 저혈당 조정 협진"
+  },
+  {
+    "id": "S-004",
+    "name": "C 교수",
+    "specialty": "안과",
+    "referral_available": false,
+    "note": "당뇨망막병증 선별 — 현재 협진 예약 마감"
+  }
+]

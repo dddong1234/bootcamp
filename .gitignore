@@ -24,3 +24,14 @@ catboost_info/
 HW/cv/yolo26n.pt
 HW/cv/yolov8n.pt
 HW/cv/yolov8s.pt
+
+AGENTS.md
+
+개인/X_ray_hackaton/
+개인/X_ray_hackaton
+
+수업자료/cv/datasets
+
+*.pkl
+*.db
+*.pt

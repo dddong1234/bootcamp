@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .container{
+      display: flex;
+    }
+    .box{
+      text-align: center;
+      background-color: skyblue;
+      border: 1px solid black;
+      flex:1
+    }
+    
+    @media (max-width: 600px) {
+      .container{
+        flex-direction: column;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">게시판</div>
+    <div class="box">포트폴리오</div>
+    <div class="box">사진첩</div>
+  </div>
+</body>
+</html>

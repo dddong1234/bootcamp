@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number">
+    <button>카운트다운 시작</button>
+    <p></p>
+    <script>
+        const button = document.querySelector('button');
+        const p = document.querySelector('p');
+        
+        button.addEventListener('click', () => {
+            button.disabled = true;
+            const input = document.querySelector('input');
+            if (!input.value) 
+                return alert('input value is empty');
+            let count = input.value;
+            const intervalId = setInterval(() => {
+                p.textContent = `${count} sec left`;
+                count--;
+                if (count < 0) {
+                    clearInterval(intervalId);
+                    p.textContent = '카운트다운 종료';
+                    button.disabled = false;
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

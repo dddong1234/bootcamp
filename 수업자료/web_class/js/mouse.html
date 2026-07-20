@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span>마우스를 올려보세요.</span>
+    
+    <div class="container"></div>
+    
+    <script>
+        const span = document.querySelector('span');
+        
+        const situations = {
+            mouseover : {
+                color : 'red',
+                border : '1px solid red'
+            }
+            ,
+            mouseout : {
+                color : 'black',
+                border : ''
+            }
+        }
+        function changeStyle(e){
+            const style = situations[e.type];
+            span.style.color = style.color;
+            span.style.border = style.border;
+        }
+        span.addEventListener('mouseover', changeStyle);
+        span.addEventListener('mouseout', changeStyle);
+        
+    </script>
+</body>
+</html>

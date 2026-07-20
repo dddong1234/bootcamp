@@ -5,17 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-  <input type="text" id="name-input" placeholder="이름을 입력하세요">
-  <button>제출</button>
-  <script>
+    <input type="text" id="name-input" placeholder="이름을 입력하세요">
+    <button>제출</button>
+    <script>
     const input = document.getElementById("name-input");
     const button = document.querySelector("button");
     
     function submitName() {
-      const p = document.createElement("p");
-      p.textContent = input.value;
-      document.body.appendChild(p);
-    }
+        if (input.value.trim() === "") {
+            alert("이름을 입력하세요");
+            return;
+        }
+        const p = document.createElement("p");
+        const welcomeText = `안녕하세요, ${input.value}님`;
+        p.textContent = welcomeText;
+        document.body.appendChild(p);
+        }
     
     button.addEventListener("click", submitName);
         

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  
+  <input type="text" placeholder="이름 입력">
+  <button id="save">저장</button>
+  <button id="delete">삭제</button>
+  <p></p>
+  
+  <script>
+    const input = document.querySelector('input');
+    const saveButton = document.querySelector('#save');
+    const deleteButton = document.querySelector('#delete');
+    const p = document.querySelector('p');
+    const savedName = localStorage.getItem('name');
+    
+    function welcomeText(name){
+      return `안녕하세요 ${name}님`
+    }
+    
+    if(savedName) {
+      p.textContent = welcomeText(savedName);
+    }
+    
+    saveButton.addEventListener(
+            'click', () => {
+              if(input.value.trim())
+              localStorage.setItem('name', input.value);
+              p.textContent = welcomeText(input.value);
+            }
+    )
+    deleteButton.addEventListener(
+            'click', () => {
+              localStorage.removeItem('name');
+              p.textContent = null;
+            }
+    )
+    
+  </script>
+</body>
+</html>

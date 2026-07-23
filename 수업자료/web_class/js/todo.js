@@ -9,6 +9,7 @@ const savedTodos =JSON.parse(localStorage.getItem('todos'))
 
 //전체 todo를 화면에 그리는 함수
 function renderTodos(){
+    todoList.innerHTML = '';
     for (const [index,todo] of todos.entries()) {
         const li = document.createElement('li');
         li.className = 'list-group-item d-flex justify-content-between align-items-center';
@@ -19,7 +20,7 @@ function renderTodos(){
         btn.textContent = '삭제'
             
         btn.addEventListener('click', () => {
-            
+            deleteTodo(index)
         })
         li.appendChild(btn)
         todoList.appendChild(li)
@@ -53,7 +54,13 @@ addBtn.addEventListener('click', () => {
     
     todos.push(todo)
     renderTodos()
-    localStorage.setItem('todos',JSON.stringify(todos))
+    saveTodos()
     
     todoInput.value = '';
+})
+
+todoInput.addEventListener('keydown', e => {
+    if(e.key === 'Enter'){
+        addBtn.click()
+    }
 })
